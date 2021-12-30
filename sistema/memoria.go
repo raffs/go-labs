@@ -59,7 +59,7 @@ func GetInfoMemoria(caminhoArquivo string) (info *InfoMemoria) {
 
 	arquivo, err := fs.AbrirArquivo(caminhoArquivo)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Erro ao abrir arquivo '%s': %v\n", MEMINFO_FILE, err)
+		fmt.Fprintf(os.Stderr, "Erro ao abrir arquivo '%s': %v\n", caminhoArquivo, err)
 		return nil
 	}
 	defer fs.FecharArquivo(arquivo)
